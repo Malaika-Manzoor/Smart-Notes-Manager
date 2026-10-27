@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Notes Manager</title>
+    <link rel="stylesheet" href="Style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Notes Manager</h1>
+        <div class="form">
+            <h2>Create Notes</h2>
+            <form action="" id="AddNotes">
+                <label for="title">Title:</label><br>
+                <input type="text" name="title" id="title" required placeholder="Enter Title"><br><br>
+                <label for="des">Description:</label><br>
+                <textarea name="description" id="des" placeholder="Enter Description"></textarea><br><br>
+                <label for="type">Type:</label><br>
+                <select name="type" id="type">
+                    <option value="text">text</option>
+                    <option value="todo">todo</option>
+                </select><br><br>
+                <input type="submit" value="Add Notes" id="noteButton">
+                <p id="SucessMessage"></p>
+            </form>
+        </div><br><br>
+        <div class="search">
+            <input type="search" name="srch" id="srch">
+            <label for="filter">Filter:</label>
+            <select name="filter" id="filter">
+                <option value="All">All</option>
+                <option value="text">text</option>
+                <option value="todo">todo</option>
+            </select>
+            <label for="sort">Sort By:</label>
+             <select name="sort" id="sort">
+                <option value="Newest">Newest</option>
+                <option value="Oldest">Oldest</option>
+            </select>
+        </div><br>
+        <div class="notesList">
+            <h2>Notes</h2>
+        </div>
+
+        <div id="scrollLoader">Loading more notes...</div>
+
+    </div>
+
+    <script type="module" src="Scripts/main.js"></script>
+</body>
+</html>

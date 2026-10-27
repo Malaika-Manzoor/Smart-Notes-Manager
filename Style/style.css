@@ -1,0 +1,194 @@
+body {
+    background-color: rgb(241, 238, 238);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form,.notesList {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(46, 4, 4, 0.08);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],textarea,select {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-bottom: 12px;
+    
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d4ed8;
+}
+
+.search {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+#srch{
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+}
+#filter ,#sort{
+    width: 15%;
+    margin-left: 30px;
+      
+}
+
+.ViewNotes {
+ background-color: #5b6ccc;
+  color: white; 
+}
+
+.ViewNotes.Viewed {
+  background-color: #16a34a;
+  color: white;
+}
+
+.DeleteButton{
+  background-color: #dc2626;
+  color: white;
+
+}
+
+.DeleteButton:hover{
+    background-color: rgb(235, 100, 100);
+}
+.EditNotes{
+    background-color: #000000;
+  color: white;
+    
+  
+}
+.EditNotes:hover{
+    background-color: rgb(53, 52, 52);
+}
+
+#SucessMessage{
+    color:green;
+}
+
+.Notescard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 10px #0002;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.Notescard h3,
+.Notescard p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    white-space: normal;
+     line-height: 1.7;
+    text-align: justify;
+
+}
+
+.NoteActions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.NoteActions button {
+    position: static;
+    min-width: 90px;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.labelTodo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 12px 0;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+}
+
+.labelTodo input[type="checkbox"] {
+    appearance: auto;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: #055c29;
+    cursor: pointer;
+}
+.labelTodo span {
+    color: #333;
+}
+
+
+.NoteLocation {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.NoteLocation:hover {
+    background-color: #e2e8f0;
+    color: #334155;
+}
