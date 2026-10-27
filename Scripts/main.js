@@ -118,10 +118,15 @@ function renderNotes(notes){
     deleteButton.classList.add("DeleteButton")
 
     deleteButton.addEventListener("click",()=>{
+        const confirmDel = confirm( "Are you sure you want to delete this note?");
+
+        if (!confirmDel) {
+            return;
+        }
         store.deleteNote(notes)
         saveNotes(store.getNotes())
         card.remove()
-        alert("Do you want to delete this note!!!")
+        // alert("Do you want to delete this note!!!")
     })
     card.appendChild(deleteButton)
    
@@ -255,7 +260,7 @@ function debounce(callback,delay){
 }
 
 searchInput.addEventListener("input",
-    debounce(handelSearch,2000))
+    debounce(handelSearch,4000))
 
 function throttle(callback,delay){
     let wait = false;
@@ -333,7 +338,8 @@ form.addEventListener("submit" , async (event)=>{
     setTimeout(() => {
            successMessage.textContent = "";
     }, 2000);
-    renderNotes(logNotes)
+    // renderNotes(logNotes)
+    updateNotesList()
 
     // localStorage.setItem("notes" ,JSON.stringify(getnotes.map(note=>({
     //     title:note.title,
